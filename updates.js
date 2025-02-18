@@ -1,37 +1,15 @@
 export const updates = [
   {
-    version: "0.8.2",
-    date: "February 2024",
-    title: "Notes & Updates Page",
-    changes: [
-      "Added new Updates page to track app changes",
-      "Introduced task notes feature",
-      "Enhanced mobile responsiveness across all pages",
-      "Improved group customization with vertical scrolling",
-      "Fixed sidebar overlap issues on mobile devices",
-      "Resolved task completion animation glitches"
-    ]
-  },
-  {
-    version: "0.8.1",
-    date: "February 2024",
-    title: "Task Due Dates",
-    changes: [
-      "Added task due dates with flexible presets",
-      "Introduced detailed task analytics",
-      "Enhanced dark/light mode transitions",
-      "Fixed group deletion confirmation dialog"
-    ]
-  },
-  {
     version: "0.8.0",
-    date: "January 2024",
+    date: "February 2025",
     title: "Initial Release",
     changes: [
-      "Launch of Smart Task with core features",
-      "Task group management system",
-      "Basic task tracking functionality",
-      "Dark mode support"
+      "Launch of Smart Note with core features",
+      "Add notes and open note editor",
+      "Basic note tracking functionality",
+      "light mode support",
+      "Download note groups to share with other users",
+      "Upload note groups sent by other users to add to your notes"
     ]
   }
 ];
