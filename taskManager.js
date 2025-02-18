@@ -64,6 +64,7 @@ export class TaskManager {
     if (group) {
       group.tasks.set(task.id, task);
       group.stats.incomplete++;
+      this.updateActivityStats('create');
       this.saveData();
     }
     return task;
@@ -213,101 +214,106 @@ export class TaskManager {
   }
 
   getTotalStats() {
+    const stats = JSON.parse(localStorage.getItem('activityStats')) || {
+      hourly: new Array(24).fill(0),
+      weekly: new Array(7).fill(0)
+    };
+
     let totalTasks = 0;
     let completedTasks = 0;
     let uncompletedTasks = 0;
     const hourlyActivity = new Array(8).fill(0);
-    const weekdayActivity = new Array(7).fill(0);
-    let streakDays = [];
-    let longestStreak = 0;
-    let currentStreak = 0;
-  
-    const activityByHour = new Array(24).fill(0);
-    const activityByDay = {
-      'Sunday': 0, 'Monday': 0, 'Tuesday': 0,
-      'Wednesday': 0, 'Thursday': 0, 'Friday': 0, 'Saturday': 0
-    };
-  
-    let totalCompletionTime = 0;
-    let completionTimeCount = 0;
+
+    // Convert 24-hour data to 8 3-hour blocks
+    for (let i = 0; i < 24; i++) {
+      hourlyActivity[Math.floor(i / 3)] += stats.hourly[i];
+    }
 
     this.groups.forEach(group => {
       group.tasks.forEach(task => {
         totalTasks++;
-      
         if (task.completed) {
           completedTasks++;
-        
-          if (task.completedAt && task.createdAt) {
-            const completionTime = task.completedAt - task.createdAt;
-            totalCompletionTime += completionTime;
-            completionTimeCount++;
-          }
-        
-          if (task.completedAt) {
-            const hour = task.completedAt.getHours();
-            activityByHour[hour]++;
-            hourlyActivity[Math.floor(hour / 3)]++;
-          
-            const day = task.completedAt.toLocaleDateString('en-US', { weekday: 'long' });
-            activityByDay[day]++;
-            weekdayActivity[task.completedAt.getDay()]++;
-          }
-        
-          const completedDate = task.completedAt.toDateString();
-          if (streakDays.includes(completedDate)) {
-            currentStreak++;
-            longestStreak = Math.max(longestStreak, currentStreak);
-          } else {
-            currentStreak = 1;
-            streakDays.push(completedDate);
-          }
         } else {
           uncompletedTasks++;
         }
       });
     });
 
-    let peakHour = activityByHour.indexOf(Math.max(...activityByHour));
+    let peakHour = stats.hourly.indexOf(Math.max(...stats.hourly));
     const peakTime = `${peakHour % 12 || 12}${peakHour < 12 ? 'am' : 'pm'}`;
-  
-    const mostActiveDay = Object.entries(activityByDay)
-      .reduce((a, b) => a[1] > b[1] ? a : b)[0];
-  
-    const avgCompletionTime = completionTimeCount > 0 
-      ? this.formatDuration(totalCompletionTime / completionTimeCount)
-      : 'N/A';
+
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const mostActiveDay = days[stats.weekly.indexOf(Math.max(...stats.weekly))];
 
     return {
       total: totalTasks,
       completed: completedTasks,
       uncompleted: uncompletedTasks,
-      completionRate: totalTasks > 0 
-        ? Math.round((completedTasks / totalTasks) * 100) 
-        : 0,
+      completionRate: totalTasks > 0 ? Math.round((completedTasks / totalTasks) * 100) : 0,
       mostActiveDay,
       peakActivityTime: peakTime,
-      avgCompletionTime,
-      longestStreak,
+      avgCompletionTime: 'N/A',
+      longestStreak: this.calculateStreak(),
       hourlyActivity,
-      weekdayActivity
+      weekdayActivity: stats.weekly
     };
   }
 
-  formatDuration(ms) {
-    const hours = Math.floor(ms / (1000 * 60 * 60));
-    const minutes = Math.floor((ms % (1000 * 60 * 60)) / (1000 * 60));
-  
-    if (hours > 24) {
-      const days = Math.floor(hours / 24);
-      return `${days} day${days !== 1 ? 's' : ''}`;
+  calculateStreak() {
+    let streak = 0;
+    let maxStreak = 0;
+    const dates = new Set();
+
+    this.groups.forEach(group => {
+      group.tasks.forEach(task => {
+        if (task.createdAt) {
+          dates.add(new Date(task.createdAt).toDateString());
+        }
+      });
+    });
+
+    const sortedDates = Array.from(dates).sort();
+    for (let i = 0; i < sortedDates.length; i++) {
+      const current = new Date(sortedDates[i]);
+      const prev = i > 0 ? new Date(sortedDates[i - 1]) : null;
+
+      if (prev && (current - prev) / (1000 * 60 * 60 * 24) === 1) {
+        streak++;
+      } else {
+        streak = 1;
+      }
+      maxStreak = Math.max(maxStreak, streak);
     }
-  
-    if (hours > 0) {
-      return `${hours}h ${minutes}m`;
+
+    return maxStreak;
+  }
+
+  updateActivityStats(action) {
+    // Initialize activity stats if they don't exist
+    if (!localStorage.getItem('activityStats')) {
+      localStorage.setItem('activityStats', JSON.stringify({
+        hourly: new Array(24).fill(0),
+        weekly: new Array(7).fill(0),
+        lastReset: new Date().toISOString()
+      }));
     }
-  
-    return `${minutes}m`;
+
+    let stats = JSON.parse(localStorage.getItem('activityStats'));
+    const now = new Date();
+    
+    // Reset stats if it's been more than a week
+    if (new Date(stats.lastReset).getTime() + 7 * 24 * 60 * 60 * 1000 < now.getTime()) {
+      stats.hourly = new Array(24).fill(0);
+      stats.weekly = new Array(7).fill(0);
+      stats.lastReset = now.toISOString();
+    }
+
+    // Update hourly and weekly stats
+    stats.hourly[now.getHours()]++;
+    stats.weekly[now.getDay()]++;
+
+    localStorage.setItem('activityStats', JSON.stringify(stats));
   }
 
   saveNoteContent(groupId, taskId, content) {
@@ -338,6 +344,7 @@ export class TaskManager {
       const task = group.tasks.get(taskId);
       if (task) {
         task.notes = notes;
+        this.updateActivityStats('update');
         this.saveData();
       }
     }

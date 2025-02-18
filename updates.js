@@ -1,15 +1,16 @@
 export const updates = [
   {
-    version: "0.8.0",
-    date: "February 2025",
-    title: "Initial Release",
-    changes: [
-      "Launch of Smart Note with core features",
-      "Add notes and open note editor",
-      "Basic note tracking functionality",
-      "light mode support",
-      "Download note groups to share with other users",
-      "Upload note groups sent by other users to add to your notes"
+    version: "0.5.0",
+    title: "The Notes Release",
+    personalMessage: "Hey everyone! I'm excited to introduce Smart Note. This web application focuses on improving the note-taking experience with rich text editing and better organization. Search for notes and content inside of notes. Users can share notes with other users as well! Inside of a group, select the download icon, send the file to a friend with Smart Note installed, and have them upload the file into a group. New features, updates and fixes will be rolled out periodically to keep the notes flowing smoothly. I hope you Smart Note! - MonoDeaf",
+    updates: [
+      
+    ],
+    knownIssues: [
+     
+    ],
+    fixes: [
+      
     ]
   }
 ];

@@ -1,6 +1,6 @@
 export class StorageManager {
   constructor() {
-    this.storageKey = 'smartTask';
+    this.storageKey = 'smartNote';
   }
 
   getData() {

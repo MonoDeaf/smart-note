@@ -638,7 +638,6 @@ body.light-mode .add-group-card h3 {
 }
 
 .tasks-list h3 {
-  padding: 1.5rem 1.5rem 0.5rem 1.5rem;
   margin: 0;
   color: var(--text-secondary);
   font-size: 1.2rem;
@@ -773,11 +772,7 @@ body.light-mode .add-group-card h3 {
   .tasks-header {
     padding: 1rem;
   }
-  
-  .tasks-list h3 {
-    padding: 1rem 1rem 0.5rem 1rem;
   }
-}
 
 .chart-container {
   background-color: var(--bg-secondary);
@@ -805,6 +800,7 @@ body.light-mode .add-group-card h3 {
 #add-task {
   border-color: var(--accent);
   color: var(--accent);
+  height: 2.5rem;
 }
 
 #add-task:hover {
@@ -1987,41 +1983,70 @@ a {
   margin-bottom: 1.5rem;
 }
 
-.update-card ul {
+.update-card .personal-message {
+  background: rgba(var(--text-rgb), 0.05);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.update-section {
+  margin-bottom: 2rem;
+}
+
+.update-section:last-child {
+  margin-bottom: 0;
+}
+
+.update-section h4 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.update-section ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.update-card li {
+.update-section li {
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   color: var(--text-secondary);
   font-size: 0.95rem;
+  line-height: 1.5;
 }
 
-.update-card li:last-child {
+.update-section li:last-child {
   margin-bottom: 0;
 }
 
-.update-card li::before {
+.update-section li::before {
   content: "•";
-  color: var(--text-primary);  
+  color: var(--text-primary);
+}
+
+.update-section.known-issues li::before {
+  color: var(--danger);
+}
+
+.update-section.fixes li::before {
+  color: var(--success);
 }
 
 @media (max-width: 768px) {
-  #updates-page h2 {
-    margin-top: 3.5rem;
-  }
-  
-  .updates-container {
-    padding: 0 1rem;
-  }
-  
   .update-card {
     padding: 1.5rem;
+  }
+  
+  .update-card .personal-message {
+    padding: 1rem;
   }
 }
 
@@ -2144,10 +2169,18 @@ a {
 }
 
 .task-info {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 1rem;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .task-info {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
 }
 
 .task-title {
@@ -2156,6 +2189,7 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  line-height: 1.4;
 }
 
 .task-date {
@@ -2454,4 +2488,42 @@ body.light-mode #new-task-modal input[type="text"]:focus,
 body.light-mode #new-task-modal textarea:focus,
 body.light-mode .form-group input[type="text"]:focus {
   border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.search-container {
+  position: relative;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.search-container input {
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 2.5rem;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+}
+
+.search-container input:focus {
+  outline: none;
+  border-color: rgba(var(--text-rgb), 0.2);
+}
+
+.search-container input::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.5;
+}
+
+.search-container .search-icon {
+  position: absolute;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
 }

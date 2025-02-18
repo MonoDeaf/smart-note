@@ -215,7 +215,13 @@ export class UIManager {
           'https://images.unsplash.com/photo-1739437455408-66aab68b5c0d?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3',
           'https://images.unsplash.com/photo-1739367156315-22b8ce82b23b?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3',
           'https://images.unsplash.com/photo-1728318781902-dc8f23961e95?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3',
-          'https://images.unsplash.com/photo-1739057736231-3577bfc1a1b9?q=80&w=2650&auto=format&fit=crop&ixlib=rb-4.0.3'
+          'https://images.unsplash.com/photo-1739057736231-3577bfc1a1b9?q=80&w=2650&auto=format&fit=crop&ixlib=rb-4.0.3',
+          'https://images.unsplash.com/photo-1739793669691-758d98bd8a4b?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3',
+          'https://images.unsplash.com/photo-1739369122285-8560a5eb18fd?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3',
+          'https://images.unsplash.com/photo-1739732106770-690d3d544bf8?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3',
+          'https://images.unsplash.com/photo-1739359652565-c48db69f62f3?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3',
+          'https://images.unsplash.com/photo-1739113166348-15a660b1cfca?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3',
+          'https://images.unsplash.com/photo-1739382445469-c35d08ca4277?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3'
         ];
 
         const imageGridHTML = imageOptions.map(url => `
@@ -555,6 +561,18 @@ export class UIManager {
               <button type="button" class="color-option" data-color="#B4E4FF" style="background-color: #B4E4FF"></button>
               <button type="button" class="color-option" data-color="#95BDFF" style="background-color: #95BDFF"></button>
               <button type="button" class="color-option" data-color="#B4CDE6" style="background-color: #B4CDE6"></button>
+              <button type="button" class="color-option" data-color="#FF1E1E" style="background-color: #FF1E1E"></button>
+              <button type="button" class="color-option" data-color="#FF9900" style="background-color: #FF9900"></button>
+              <button type="button" class="color-option" data-color="#FFE600" style="background-color: #FFE600"></button>
+              <button type="button" class="color-option" data-color="#14FF00" style="background-color: #14FF00"></button>
+              <button type="button" class="color-option" data-color="#00FFF0" style="background-color: #00FFF0"></button>
+              <button type="button" class="color-option" data-color="#0066FF" style="background-color: #0066FF"></button>
+              <button type="button" class="color-option" data-color="#9933FF" style="background-color: #9933FF"></button>
+              <button type="button" class="color-option" data-color="#FF00FF" style="background-color: #FF00FF"></button>
+              <button type="button" class="color-option" data-color="#FF0099" style="background-color: #FF0099"></button>
+              <button type="button" class="color-option" data-color="#00FF66" style="background-color: #00FF66"></button>
+              <button type="button" class="color-option" data-color="#ff4a00" style="background-color: #ff4a00"></button>
+              <button type="button" class="color-option" data-color="#d5dcdc" style="background-color: #d5dcdc"></button>
             </div>
           </div>
 
@@ -628,7 +646,13 @@ export class UIManager {
       'https://images.unsplash.com/photo-1739437455408-66aab68b5c0d?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3',
       'https://images.unsplash.com/photo-1739367156315-22b8ce82b23b?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3',
       'https://images.unsplash.com/photo-1728318781902-dc8f23961e95?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3',
-      'https://images.unsplash.com/photo-1739057736231-3577bfc1a1b9?q=80&w=2650&auto=format&fit=crop&ixlib=rb-4.0.3'
+      'https://images.unsplash.com/photo-1739057736231-3577bfc1a1b9?q=80&w=2650&auto=format&fit=crop&ixlib=rb-4.0.3',
+      'https://images.unsplash.com/photo-1739793669691-758d98bd8a4b?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3',
+      'https://images.unsplash.com/photo-1739369122285-8560a5eb18fd?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3',
+      'https://images.unsplash.com/photo-1739732106770-690d3d544bf8?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3',
+      'https://images.unsplash.com/photo-1739359652565-c48db69f62f3?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3',
+      'https://images.unsplash.com/photo-1739113166348-15a660b1cfca?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3',
+      'https://images.unsplash.com/photo-1739382445469-c35d08ca4277?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3'
     ];
 
     const imageGridHTML = imageOptions.map(url => `
@@ -772,9 +796,18 @@ export class UIManager {
           <button id="add-task" class="btn">Add Note</button>
         </div>
       </div>
+      <div class="search-container">
+        <input type="text" id="search-notes" placeholder="Search notes...">
+        <span class="iconify search-icon" data-icon="mdi:magnify"></span>
+      </div>
       <div id="incomplete-tasks"></div>
     `;
     tasksContainer.appendChild(tasksListDiv);
+
+    const searchInput = document.getElementById('search-notes');
+    searchInput.addEventListener('input', (e) => {
+      this.filterNotes(group, e.target.value.toLowerCase());
+    });
 
     const downloadBtn = document.getElementById('download-notes');
     downloadBtn.addEventListener('click', () => {
@@ -792,7 +825,7 @@ export class UIManager {
     if (group.tasks.size === 0) {
       incompleteTasks.innerHTML = `
         <div style="grid-column: 1 / -1; text-align: left; padding: 3rem; color: var(--text-secondary);">
-          <svg viewBox="0 0 24 24" width="48" height="48" style="margin-bottom: 1rem; opacity: 0.5;">
+          <svg viewBox="0 0 24 24" width="28" height="28" style="margin-bottom: 0rem; opacity: 0.5;">
             <path fill="currentColor" d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
           </svg>
           <h3 style="margin-bottom: 0.5rem; color: var(--text-secondary);">No notes yet</h3>
@@ -800,9 +833,9 @@ export class UIManager {
         </div>
       `;
     } else {
-      const tasksArray = Array.from(group.tasks.values());
-      tasksArray.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-      
+      const tasksArray = Array.from(group.tasks.values())
+        .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+
       tasksArray.forEach(task => {
         const taskElement = document.createElement('div');
         taskElement.className = 'task-item';
@@ -831,21 +864,141 @@ export class UIManager {
 
         taskElement.addEventListener('click', (e) => {
           if (!e.target.closest('.task-delete-btn')) {
-            this.openNoteEditor(groupId, task.id, task.title, task.notes || '');
+            this.openNoteEditor(group.id, task.id, task.title, task.notes || '');
           }
         });
 
         const deleteBtn = taskElement.querySelector('.task-delete-btn');
         deleteBtn.addEventListener('click', (e) => {
           e.stopPropagation();
-          this.showDeleteTaskConfirmation(groupId, task.id);
+          this.showDeleteTaskConfirmation(group.id, task.id);
         });
-
+        
         incompleteTasks.prepend(taskElement);
       });
     }
 
     this.updateCharts(groupId);
+  }
+
+  filterNotes(group, searchText) {
+    const incompleteTasks = document.getElementById('incomplete-tasks');
+    incompleteTasks.innerHTML = '';
+
+    if (group.tasks.size === 0) {
+      incompleteTasks.innerHTML = `
+        <div style="grid-column: 1 / -1; text-align: left; padding: 3rem; color: var(--text-secondary);">
+          <svg viewBox="0 0 24 24" width="48" height="48" style="margin-bottom: 0rem; opacity: 0.5;">
+            <path fill="currentColor" d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+          </svg>
+          <h3 style="margin-bottom: 0.5rem; color: var(--text-secondary);">No notes yet</h3>
+          <p style="margin: 0; opacity: 0.7;">Click the "Add Note" button to create your first note</p>
+        </div>
+      `;
+      return;
+    }
+
+    const tasksArray = Array.from(group.tasks.values())
+      .filter(task => {
+        const titleMatch = task.title.toLowerCase().includes(searchText);
+        const notesMatch = (task.notes || '').toLowerCase().includes(searchText);
+        return titleMatch || notesMatch;
+      })
+      .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+
+    if (tasksArray.length === 0) {
+      incompleteTasks.innerHTML = `
+        <div style="grid-column: 1 / -1; text-align: left; padding: 3rem; color: var(--text-secondary);">
+          <svg viewBox="0 0 24 24" width="48" height="48" style="margin-bottom: 1rem; opacity: 0.5;">
+            <path fill="currentColor" d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+          </svg>
+          <h3 style="margin-bottom: 0.5rem; color: var(--text-secondary);">No matching notes found</h3>
+          <p style="margin: 0; opacity: 0.7;">Try a different search term</p>
+        </div>
+      `;
+      return;
+    }
+    
+    tasksArray.forEach(task => {
+      const taskElement = document.createElement('div');
+      taskElement.className = 'task-item';
+      
+      let displayTitle = task.title;
+      let matchInfo = '';
+      
+      if (searchText) {
+        if (task.title.toLowerCase().includes(searchText)) {
+          displayTitle = task.title.replace(new RegExp(searchText, 'gi'), match => 
+            `<span style="background-color: rgba(var(--text-rgb), 0.2);">${match}</span>`
+          );
+        }
+        
+        if (task.notes && task.notes.toLowerCase().includes(searchText)) {
+          const noteText = task.notes.toString();
+          const searchIndex = noteText.toLowerCase().indexOf(searchText.toLowerCase());
+          const start = Math.max(0, searchIndex - 30);
+          const end = Math.min(noteText.length, searchIndex + 30);
+          let excerpt = noteText.substring(start, end);
+          
+          if (start > 0) excerpt = '...' + excerpt;
+          if (end < noteText.length) excerpt = excerpt + '...';
+          
+          excerpt = excerpt.replace(new RegExp(searchText, 'gi'), match => 
+            `<span style="background-color: rgba(var(--text-rgb), 0.2);">${match}</span>`
+          );
+          
+          matchInfo = `
+            <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.25rem; 
+                      font-style: italic; opacity: 0.8;">
+              Match found in note: ${excerpt}
+            </div>
+          `;
+        }
+      }
+      
+      taskElement.innerHTML = `
+        <div class="task-row">
+          <div class="task-info" style="width: 100%;">
+            <div style="display: flex; flex-direction: column;">
+              <span class="task-title">${displayTitle}</span>
+              ${matchInfo}
+            </div>
+            ${!searchText ? `
+              <span class="task-date">${new Date(task.createdAt).toLocaleString('en-US', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+              })}</span>
+            ` : ''}
+          </div>
+          ${!searchText ? `
+            <button class="task-delete-btn" data-task-id="${task.id}" title="Delete note">
+              <svg viewBox="0 0 24 24">
+                <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+              </svg>
+            </button>
+          ` : ''}
+        </div>
+      `;
+
+      taskElement.addEventListener('click', (e) => {
+        if (!e.target.closest('.task-delete-btn')) {
+          this.openNoteEditor(group.id, task.id, task.title, task.notes || '');
+        }
+      });
+
+      if (!searchText) {
+        const deleteBtn = taskElement.querySelector('.task-delete-btn');
+        deleteBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          this.showDeleteTaskConfirmation(group.id, task.id);
+        });
+      }
+
+      incompleteTasks.prepend(taskElement);
+    });
   }
 
   openNoteEditor(groupId, taskId, title, content) {
@@ -855,7 +1008,7 @@ export class UIManager {
     const doneButton = editor.querySelector('.done-button');
     const textControls = editor.querySelectorAll('.text-control-btn');
     const commandPalette = document.querySelector('.command-palette');
-
+    
     headerTitle.textContent = title;
     textarea.innerHTML = content;
     editor.classList.add('active');
@@ -867,9 +1020,9 @@ export class UIManager {
           !e.target.closest('.note-textarea') && 
           commandPalette.classList.contains('active')) {
         commandPalette.classList.remove('active');
-        const searchInput = commandPalette.querySelector('input');
-        if (searchInput) {
-          searchInput.value = '';
+        const commandSearchInput = commandPalette.querySelector('input');
+        if (commandSearchInput) {
+          commandSearchInput.value = '';
         }
       }
     });
@@ -885,37 +1038,7 @@ export class UIManager {
       { label: 'Numbered List', action: 'insertOrderedList', icon: 'mdi:format-list-numbered', shortcut: 'numbered' }
     ];
 
-    textarea.addEventListener('keydown', (e) => {
-      if (e.key === '/') {
-        e.preventDefault();
-        currentRange = window.getSelection().getRangeAt(0);
-        const rect = currentRange.getBoundingClientRect();
-        
-        commandPalette.style.position = 'absolute';
-        commandPalette.style.left = `${rect.left}px`;
-        commandPalette.style.top = `${rect.bottom + 5}px`;
-        
-        commandPalette.classList.add('active');
-        const searchInput = commandPalette.querySelector('input');
-        searchInput.value = '';
-        searchInput.focus();
-        
-        updateCommandList(commands);
-      } else if (e.key === 'Escape' && commandPalette.classList.contains('active')) {
-        closeCommandPalette();
-      }
-    });
-
-    const searchInput = commandPalette.querySelector('input');
-    searchInput.addEventListener('click', (e) => {
-      e.stopPropagation(); 
-    });
-
-    commandPalette.addEventListener('click', (e) => {
-      e.stopPropagation();
-    });
-
-    const fontCommands = [
+    commands.push(...[
       { 
         label: 'Arimo Font', 
         action: 'fontName', 
@@ -964,82 +1087,46 @@ export class UIManager {
         shortcut: 'font',
         preview: 'Aa'
       }
-    ];
-
-    const sizeCommands = [
+    ], [
       { label: 'Small Text', action: 'fontSize', value: '1', icon: 'mdi:format-size', shortcut: 'size' },
       { label: 'Medium Text', action: 'fontSize', value: '2', icon: 'mdi:format-size', shortcut: 'size' },
       { label: 'Large Text', action: 'fontSize', value: '3', icon: 'mdi:format-size', shortcut: 'size' },
       { label: 'Extra Large Text', action: 'fontSize', value: '4', icon: 'mdi:format-size', shortcut: 'size' },
       { label: 'Huge Text', action: 'fontSize', value: '5', icon: 'mdi:format-size', shortcut: 'size' }
-    ];
+    ]);
 
-    commands.push(...fontCommands, ...sizeCommands);
-
-    const commandList = commandPalette.querySelector('.command-list');
-    searchInput.addEventListener('input', () => {
-      const query = searchInput.value.toLowerCase();
-      const filteredCommands = commands.filter(cmd => 
-        cmd.label.toLowerCase().includes(query) || 
-        cmd.shortcut.toLowerCase().includes(query)
-      );
-      updateCommandList(filteredCommands);
+    textarea.addEventListener('keydown', (e) => {
+      if (e.key === '/') {
+        e.preventDefault();
+        currentRange = window.getSelection().getRangeAt(0);
+        const rect = currentRange.getBoundingClientRect();
+        
+        commandPalette.style.position = 'absolute';
+        commandPalette.style.left = `${rect.left}px`;
+        commandPalette.style.top = `${rect.bottom + 5}px`;
+        
+        commandPalette.classList.add('active');
+        const searchInput = commandPalette.querySelector('input');
+        searchInput.value = '';
+        searchInput.focus();
+        
+        updateCommandList(commands);
+      } else if (e.key === 'Escape' && commandPalette.classList.contains('active')) {
+        closeCommandPalette();
+      }
     });
 
-    function updateCommandList(items) {
-      commandList.innerHTML = items.map(cmd => {
-        let extraClass = '';
-        let previewHtml = '';
-        
-        if (cmd.action === 'fontName') {
-          extraClass = 'font-family';
-          previewHtml = `<span class="preview" style="font-family: ${cmd.value}">${cmd.preview}</span>`;
-        }
-        
-        return `
-          <div class="command-item ${extraClass}" data-action="${cmd.action}" data-value="${cmd.value || ''}">
-            <div class="icon">
-              <span class="iconify" data-icon="${cmd.icon}"></span>
-            </div>
-            <span class="label">${cmd.label}</span>
-            ${previewHtml}
-            <span class="shortcut">${cmd.shortcut}</span>
-          </div>
-        `;
-      }).join('');
-    }
-
-    function executeCommand(action, value) {
-      if (currentRange) {
-        const selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(currentRange);
-      }
-
-      if (action === 'fontName' || action === 'fontSize' || action === 'foreColor') {
-        document.execCommand(action, false, value);
-      } else if (value) {
-        document.execCommand(action, false, value);
-      } else {
-        document.execCommand(action, false, null);
-      }
-
-      closeCommandPalette();
-      textarea.focus();
-    }
-
-    function closeCommandPalette() {
-      commandPalette.classList.remove('active');
-      searchInput.value = '';
-    }
-
-    commandList.addEventListener('click', (e) => {
-      const commandItem = e.target.closest('.command-item');
-      if (commandItem) {
-        e.stopPropagation(); 
-        executeCommand(commandItem.dataset.action, commandItem.dataset.value);
-      }
+    const searchInput = commandPalette.querySelector('input');
+    searchInput.addEventListener('click', (e) => {
+      e.stopPropagation(); 
     });
+
+    commandPalette.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+
+    const fontCommands = commands.filter(command => command.action === 'fontName');
+    const sizeCommands = commands.filter(command => command.action === 'fontSize');
 
     const fontFamilySelect = editor.querySelector('.font-family-select');
     const fontSizeSelect = editor.querySelector('.font-size-select');
@@ -1100,6 +1187,73 @@ export class UIManager {
       }
     };
     document.addEventListener('keydown', handleEscape);
+
+    function updateCommandList(items) {
+      const commandList = commandPalette.querySelector('.command-list');
+      commandList.innerHTML = items.map(cmd => {
+        let extraClass = '';
+        let previewHtml = '';
+        
+        if (cmd.action === 'fontName') {
+          extraClass = 'font-family';
+          previewHtml = `<span class="preview" style="font-family: ${cmd.value}">${cmd.preview}</span>`;
+        }
+        
+        return `
+          <div class="command-item ${extraClass}" data-action="${cmd.action}" data-value="${cmd.value || ''}">
+            <div class="icon">
+              <span class="iconify" data-icon="${cmd.icon}"></span>
+            </div>
+            <span class="label">${cmd.label}</span>
+            ${previewHtml}
+            <span class="shortcut">${cmd.shortcut}</span>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function executeCommand(action, value) {
+      if (currentRange) {
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(currentRange);
+      }
+
+      if (action === 'fontName' || action === 'fontSize' || action === 'foreColor') {
+        document.execCommand(action, false, value);
+      } else if (value) {
+        document.execCommand(action, false, value);
+      } else {
+        document.execCommand(action, false, null);
+      }
+
+      closeCommandPalette();
+      textarea.focus();
+    }
+
+    function closeCommandPalette() {
+      commandPalette.classList.remove('active');
+      const commandSearchInput = commandPalette.querySelector('input');
+      commandSearchInput.value = '';
+    }
+
+    const commandSearchInput = commandPalette.querySelector('input');
+    commandSearchInput.addEventListener('input', () => {
+      const query = commandSearchInput.value.toLowerCase();
+      const filteredCommands = commands.filter(cmd => 
+        cmd.label.toLowerCase().includes(query) || 
+        cmd.shortcut.toLowerCase().includes(query)
+      );
+      updateCommandList(filteredCommands);
+    });
+
+    commandPalette.querySelector('.command-list').addEventListener('click', (e) => {
+      const commandItem = e.target.closest('.command-item');
+      if (commandItem) {
+        e.stopPropagation(); 
+        executeCommand(commandItem.dataset.action, commandItem.dataset.value);
+      }
+    });
   }
 
   showDeleteTaskConfirmation(groupId, taskId) {
@@ -1187,19 +1341,35 @@ export class UIManager {
 
   updateGraphsPage() {
     const stats = this.taskManager.getTotalStats();
-
+    
     document.getElementById('total-tasks').textContent = stats.total;
-    document.getElementById('most-active-day').textContent = stats.mostActiveDay || 'N/A';
-    document.getElementById('peak-activity-time').textContent = stats.peakActivityTime || 'N/A';
+    document.getElementById('most-active-day').textContent = stats.mostActiveDay;
+    document.getElementById('peak-activity-time').textContent = stats.peakActivityTime;
     document.getElementById('longest-streak').textContent = `${stats.longestStreak} days`;
 
-    const allStats = this.taskManager.getAllTaskStats();
+    if (this.globalCharts) {
+      Object.values(this.globalCharts).forEach(chart => chart.destroy());
+    }
+    
+    this.globalCharts = {};
 
-    const chartConfig = {
+    const weekStats = this.taskManager.getAllTaskStats();
+    
+    this.globalCharts.allTasks = new Chart('allTasksChart', {
       type: 'line',
+      data: {
+        labels: weekStats.map(stat => stat.date),
+        datasets: [{
+          label: 'Total Tasks',
+          data: weekStats.map(stat => stat.total),
+          borderColor: '#7289da',
+          backgroundColor: 'rgba(114, 137, 218, 0.1)',
+          tension: 0.4,
+          fill: true
+        }]
+      },
       options: {
         responsive: true,
-        maintainAspectRatio: true,
         plugins: {
           legend: {
             display: false
@@ -1214,73 +1384,146 @@ export class UIManager {
           }
         }
       }
-    };
+    });
 
-    ['allTasksChart', 'creationTrendChart', 'activityHeatChart', 'weekdayActivityChart'].forEach(chartId => {
-      const ctx = document.getElementById(chartId);
-      if (!ctx) return;
-
-      if (this.globalCharts?.[chartId]) {
-        this.globalCharts[chartId].destroy();
+    this.globalCharts.creationTrend = new Chart('creationTrendChart', {
+      type: 'bar',
+      data: {
+        labels: weekStats.map(stat => stat.date),
+        datasets: [{
+          data: weekStats.map(stat => stat.created),
+          backgroundColor: '#43b581',
+          borderRadius: 4
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: false
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              stepSize: 1
+            }
+          }
+        }
       }
+    });
 
-      let data;
-      switch(chartId) {
-        case 'allTasksChart':
-          data = {
-            labels: allStats.map(stat => stat.date),
-            datasets: [{
-              data: allStats.map(stat => stat.total),
-              borderColor: '#7289da',
-              backgroundColor: 'rgba(114, 137, 218, 0.2)',
-              tension: 0.4,
-              fill: true
-            }]
-          };
-          break;
-        case 'creationTrendChart':
-          data = {
-            labels: allStats.map(stat => stat.date),
-            datasets: [{
-              data: allStats.map(stat => stat.created),
-              borderColor: '#ff6b6b',
-              backgroundColor: 'rgba(255, 107, 107, 0.2)',
-              tension: 0.4,
-              fill: true
-            }]
-          };
-          break;
-        case 'activityHeatChart':
-          data = {
-            labels: ['12am', '3am', '6am', '9am', '12pm', '3pm', '6pm', '9pm'],
-            datasets: [{
-              data: stats.hourlyActivity,
-              borderColor: '#43b581',
-              backgroundColor: 'rgba(67, 181, 129, 0.2)',
-              tension: 0.4,
-              fill: true
-            }]
-          };
-          break;
-        case 'weekdayActivityChart':
-          data = {
-            labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-            datasets: [{
-              data: stats.weekdayActivity,
-              borderColor: '#7289da',
-              backgroundColor: 'rgba(114, 137, 218, 0.2)',
-              tension: 0.4,
-              fill: true
-            }]
-          };
-          break;
+    this.globalCharts.activityHeat = new Chart('activityHeatChart', {
+      type: 'bar',
+      data: {
+        labels: Array.from({length: 8}, (_, i) => `${i * 3}:00`),
+        datasets: [{
+          data: stats.hourlyActivity,
+          backgroundColor: Array(8).fill('#7289da'),
+          borderRadius: 4
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: false
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              stepSize: 1,
+              callback: value => Math.round(value)
+            }
+          }
+        }
       }
+    });
 
-      if (!this.globalCharts) this.globalCharts = {};
-      this.globalCharts[chartId] = new Chart(ctx, {
-        ...chartConfig,
-        data
-      });
+    this.globalCharts.weekdayActivity = new Chart('weekdayActivityChart', {
+      type: 'bar',
+      data: {
+        labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+        datasets: [{
+          data: stats.weekdayActivity,
+          backgroundColor: Array(7).fill('#7289da'),
+          borderRadius: 4
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: false
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              stepSize: 1,
+              callback: value => Math.round(value)
+            }
+          }
+        }
+      }
+    });
+  }
+
+  updateUpdatesPage() {
+    const updatesContainer = document.querySelector('.updates-container');
+    if (!updatesContainer) return;
+
+    import('./updates.js').then(({ updates, setLastSeenVersion, getLatestVersion }) => {
+      updatesContainer.innerHTML = updates.map(update => `
+        <div class="update-card">
+          <div class="version">Version ${update.version}</div>
+          <h3>${update.title}</h3>
+          
+          ${update.personalMessage ? `
+            <div class="personal-message">
+              ${update.personalMessage}
+            </div>
+          ` : ''}
+          
+          ${update.updates ? `
+            <div class="update-section updates">
+              <h4>What's New</h4>
+              <ul>
+                ${update.updates.map(item => `<li>${item}</li>`).join('')}
+              </ul>
+            </div>
+          ` : ''}
+          
+          ${update.knownIssues ? `
+            <div class="update-section known-issues">
+              <h4>Known Issues</h4>
+              <ul>
+                ${update.knownIssues.map(item => `<li>${item}</li>`).join('')}
+              </ul>
+            </div>
+          ` : ''}
+          
+          ${update.fixes ? `
+            <div class="update-section fixes">
+              <h4>Fixed Issues</h4>
+              <ul>
+                ${update.fixes.map(item => `<li>${item}</li>`).join('')}
+              </ul>
+            </div>
+          ` : ''}
+        </div>
+      `).join('');
+
+      setLastSeenVersion(getLatestVersion());
+      
+      const indicator = document.querySelector('.update-indicator');
+      if (indicator) {
+        indicator.classList.remove('active');
+      }
     });
   }
 
@@ -1294,6 +1537,13 @@ export class UIManager {
       themeToggle.checked = localStorage.getItem('theme') !== 'light';
       document.body.classList.toggle('light-mode', localStorage.getItem('theme') === 'light');
     }
+
+    import('./updates.js').then(({ getLatestVersion }) => {
+      const versionElement = document.getElementById('app-version');
+      if (versionElement) {
+        versionElement.textContent = getLatestVersion();
+      }
+    });
   }
 
   getRelativeDateDisplay(dateStr) {
@@ -1322,33 +1572,6 @@ export class UIManager {
     }
     
     return new Date(dateStr).toLocaleString();
-  }
-
-  updateUpdatesPage() {
-    const updatesContainer = document.querySelector('.updates-container');
-    if (!updatesContainer) return;
-
-    import('./updates.js').then(({ updates, setLastSeenVersion, getLatestVersion }) => {
-      updatesContainer.innerHTML = updates.map(update => `
-        <div class="update-card">
-          <div class="version">Version ${update.version}</div>
-          <div class="date">${update.date}</div>
-          <h3>${update.title}</h3>
-          <ul>
-            ${update.changes.map(change => `
-              <li>${change}</li>
-            `).join('')}
-          </ul>
-        </div>
-      `).join('');
-
-      setLastSeenVersion(getLatestVersion());
-      
-      const indicator = document.querySelector('.update-indicator');
-      if (indicator) {
-        indicator.classList.remove('active');
-      }
-    });
   }
 
   updateUpdatesIndicator() {
@@ -1408,54 +1631,51 @@ export class UIManager {
                 throw new Error('Invalid file format');
             }
 
-            // Import the notes
             data.notes.forEach(note => {
-                const task = this.taskManager.createTask(groupId, note.title);
-                if (task) {
-                    this.taskManager.saveTaskNotes(groupId, task.id, note.notes || '');
-                }
+              const task = this.taskManager.createTask(groupId, note.title);
+              if (task) {
+                this.taskManager.saveTaskNotes(groupId, task.id, note.notes || '');
+              }
             });
 
             this.updateGroupPage(groupId);
             
-            // Show success message
             const dialog = document.createElement('dialog');
             dialog.className = 'confirmation-dialog';
             dialog.innerHTML = `
-                <h3>Upload Successful</h3>
-                <p>${data.notes.length} notes have been imported successfully.</p>
-                <div class="modal-buttons">
-                    <button class="btn" id="ok-button">OK</button>
-                </div>
+              <h3>Upload Successful</h3>
+              <p>${data.notes.length} notes have been imported successfully.</p>
+              <div class="modal-buttons">
+                <button class="btn" id="ok-button">OK</button>
+              </div>
             `;
             
             document.body.appendChild(dialog);
             dialog.showModal();
             
             dialog.querySelector('#ok-button').onclick = () => {
-                dialog.close();
-                dialog.remove();
+              dialog.close();
+              dialog.remove();
             };
 
         } catch (error) {
-            // Show error message
-            const dialog = document.createElement('dialog');
-            dialog.className = 'confirmation-dialog';
-            dialog.innerHTML = `
-                <h3>Upload Failed</h3>
-                <p>The selected file is not a valid notes backup file.</p>
-                <div class="modal-buttons">
-                    <button class="btn danger" id="ok-button">OK</button>
-                </div>
-            `;
-            
-            document.body.appendChild(dialog);
-            dialog.showModal();
-            
-            dialog.querySelector('#ok-button').onclick = () => {
-                dialog.close();
-                dialog.remove();
-            };
+          const dialog = document.createElement('dialog');
+          dialog.className = 'confirmation-dialog';
+          dialog.innerHTML = `
+            <h3>Upload Failed</h3>
+            <p>The selected file is not a valid notes backup file.</p>
+            <div class="modal-buttons">
+              <button class="btn danger" id="ok-button">OK</button>
+            </div>
+          `;
+          
+          document.body.appendChild(dialog);
+          dialog.showModal();
+          
+          dialog.querySelector('#ok-button').onclick = () => {
+            dialog.close();
+            dialog.remove();
+          };
         }
     };
     reader.readAsText(file);
